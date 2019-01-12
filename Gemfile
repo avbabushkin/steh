@@ -17,6 +17,7 @@ group :test do
   gem 'capybara'
 end
 
+gem 'slim'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
