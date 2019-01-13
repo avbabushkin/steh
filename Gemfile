@@ -3,13 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
-
 gem 'rails', '~> 5.2.2'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'listen'
-  gem 'rspec-rails' 
+  gem 'rspec-rails'
 end
 
 group :test do
@@ -34,3 +33,5 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+
