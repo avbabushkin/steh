@@ -9,11 +9,13 @@ group :development, :test do
   gem 'sqlite3'
   gem 'listen'
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+  gem 'libnotify'
 end
 
 gem 'slim'

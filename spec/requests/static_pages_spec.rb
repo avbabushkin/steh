@@ -9,9 +9,14 @@ RSpec.describe "StaticPages", type: :request do
       expect(page).to have_content('Home')
     end
 
-    it "should have the right title" do
+    it "должен быть заголовок:" do
+      visit '/static_pages/home'чёч
+      expect(page).to have_title("#{base_title}")
+    end
+
+    it "should not have a custom page title" do
       visit '/static_pages/home'
-      expect(page).to have_title("#{base_title} | Home")
+      expect(page).not_to have_title('| Home')
     end
   end
 
