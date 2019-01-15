@@ -1,4 +1,9 @@
-h1 Home
+.center.hero-unit
+  .container
+    .home-content
+      h1 Welcome to Steh
 
-#content
-  p Find me in app/views/static_pages/home.html.slim
+      h2 Rent vehicle for you
+      = link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"
+      /= link_to image_tag("logo.png", alt: "Surgut tehnika"), '#', class: "imglogo"
+

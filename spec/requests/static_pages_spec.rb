@@ -1,61 +1,35 @@
 require 'rails_helper'
-
+require_relative '../support/utilities.rb'
 RSpec.describe "StaticPages", type: :request do
-  let(:base_title) {"Steh"}
+  
+  subject { page } 
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should be contain text: Home" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Home')
-    end
-
-    it "должен быть заголовок:" do
-      visit '/static_pages/home'чёч
-      expect(page).to have_title("#{base_title}")
-    end
-
-    it "should not have a custom page title" do
-      visit '/static_pages/home'
-      expect(page).not_to have_title('| Home')
-    end
+    it { should have_content('Steh') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
   end
 
   describe "Help page" do
+    before { visit help_path }
 
-    it "should have the content 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Help')
-    end
-
-    it "should have the right title" do
-      visit '/static_pages/help'
-      expect(page).to have_title("#{base_title} | Help")
-    end
+    it { should have_content('Help') }
+    it { should have_title(full_title('Help')) }
   end
 
   describe "About page" do
+    before { visit about_path }
 
-    it "should have the content 'About'" do
-      visit '/static_pages/about'
-      expect(page).to have_content('About')
-    end
-
-    it "should have the right title" do
-      visit '/static_pages/about'
-      expect(page).to have_title("#{base_title} | About")
-    end
+    it { should have_content('About') }
+    it { should have_title(full_title('About')) }
   end
 
   describe "Contact page" do
+    before { visit contact_path }
 
-    it "should have the content 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_content('Contact')
-    end
-
-    it "should have the right title" do
-      visit '/static_pages/contact'
-      expect(page).to have_title("#{base_title} | Contact")
-    end
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
   end
 end

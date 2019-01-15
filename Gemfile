@@ -10,6 +10,7 @@ group :development, :test do
   gem 'listen'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'bootstrap-sass'
 end
 
 group :test do
