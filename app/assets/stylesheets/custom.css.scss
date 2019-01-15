@@ -5,12 +5,12 @@ $grayLight: #999;
 /* universal */
 
 html {
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
 }
 
 body {
   padding-top: 40px;
-  background: url(home-page.jpg);
+  background: url(../images/home-page.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
