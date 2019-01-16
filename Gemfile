@@ -18,10 +18,16 @@ group :test do
   gem 'libnotify'
 end
 
+# adding this gem solve problem sass precompile
 gem 'bootstrap-sass'
+
 gem 'slim'
 gem 'puma', '~> 3.11'
-#gem 'sass-rails', '~> 5.0'
+
+# this gem was be disable, because he called error
+# sass precompile during deploy on heroku
+# gem 'sass-rails', '~> 5.0'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
