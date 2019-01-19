@@ -33,6 +33,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bcrypt'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
