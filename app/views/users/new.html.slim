@@ -1,5 +1,28 @@
 - provide(:title, 'Sign up')
 h1 Sign up
 
-#content
-  p join our team 
+.row
+  .span6.offset3.form-field
+    = form_for @user do |f|
+      - if @user.errors.any?
+        div id="error_explanation"
+          .alert.alert-error
+            p The form contains 
+            = pluralize(@user.errors.count, "error")
+          ul
+            - @user.errors.full_messages.each do |msg|
+              li = msg
+
+      = f.label :name
+      = f.text_field :name
+
+      = f.label :email
+      = f.text_field :email
+
+      = f.label :password
+      = f.password_field :password
+
+      = f.label :password_confirmation, "Confirmation"
+      = f.password_field :password_confirmation
+      
+      = f.submit "Create my account", class: "btn bnt-large btn-primary"

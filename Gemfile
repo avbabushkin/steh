@@ -16,6 +16,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
   gem 'libnotify'
+  gem 'factory_bot_rails'
 end
 
 # adding this gem solve problem sass precompile
