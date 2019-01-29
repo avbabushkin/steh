@@ -9,6 +9,7 @@ RSpec.describe "UserPages", type: :request do
     let(:user) { FactoryBot.create(:user) }
     before { visit user_path(user) }
 
+
     it { should have_content(user.name) }
     it { should have_title(user.name) }
   end
