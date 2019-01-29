@@ -1,3 +1,3 @@
 # README
 
-This site for the SurgutTehnika company.
+This site for the STEH company.
