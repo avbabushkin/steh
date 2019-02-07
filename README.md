@@ -1,3 +1,3 @@
 # README
 
-This site for the [STEH](http://stehsteh.heroku.com) company.
+This site for the [STEH](https://stehsteh.herokuapp.com) company.
